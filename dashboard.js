@@ -13,7 +13,7 @@ navItems.forEach(item => {
     } else if (text === 'Investments') {
       window.location.href = 'investments.html';
     } else if (text === 'Transfer Funds') {
-      alert('Transfer Funds page - Coming soon!');
+      window.location.href = 'transfer.html';
     } else if (text === 'Settings') {
       alert('Settings page - Coming soon!');
     }

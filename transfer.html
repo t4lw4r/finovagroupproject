@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Finova – Transfer Funds</title>
+  <link rel="stylesheet" href="transfer.css">
+</head>
+
+<body>
+
+  <!-- SIDEBAR -->
+  <div class="sidebar">
+    <div class="logo-section">
+      <img src="logo.png" alt="Finova Logo" class="logo-img">
+    </div>
+    <div class="nav-item" onclick="window.location.href='dashboard.html'">Dashboard</div>
+    <div class="nav-item" onclick="window.location.href='transactions.html'">Transactions</div>
+    <div class="nav-item" onclick="window.location.href='investments.html'">Investments</div>
+    <div class="nav-item active">Transfer Funds</div>
+    <div class="nav-item">Settings</div>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <div class="main-content">
+
+    <!-- HEADER -->
+    <div class="header">
+      <h1 class="page-title">Transfer Funds</h1>
+    </div>
+
+    <!-- SEARCH BAR -->
+    <div class="search-container">
+      <div class="search-box">
+        <span class="search-icon">🔍</span>
+        <input type="text" class="search-input" placeholder="Search account...">
+      </div>
+      <button class="filter-btn">
+        <span class="filter-icon">⚙</span>
+      </button>
+    </div>
+
+    <!-- TRANSFER SECTION -->
+    <div class="transfer-grid">
+
+      <!-- LEFT: TRANSFER FORM -->
+      <div class="transfer-form-container">
+
+        <!-- ACCOUNT SELECTION -->
+        <div class="accounts-section">
+          <div class="account-column">
+            <label class="account-label">From Account</label>
+            <div class="account-card selected">
+              <div class="account-icon checking">
+                <span>💳</span>
+              </div>
+              <div class="account-info">
+                <div class="account-name">Checking Account</div>
+                <div class="account-balance">$12,450</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="transfer-arrow">⇄</div>
+
+          <div class="account-column">
+            <label class="account-label">To Account</label>
+            <div class="account-card">
+              <div class="account-icon savings">
+                <span>💰</span>
+              </div>
+              <div class="account-info">
+                <div class="account-name">Savings Account</div>
+                <div class="account-balance">$8,340</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- AMOUNT INPUT -->
+        <div class="form-group">
+          <label class="input-label">Amount to Transfer</label>
+          <div class="amount-input-wrapper">
+            <span class="currency-symbol">$</span>
+            <input type="number" class="amount-input" placeholder="0.00" id="transferAmount">
+          </div>
+          <div class="input-hint">Minimum $1 — No fee for interaccount transfers</div>
+        </div>
+
+        <!-- NOTES INPUT -->
+        <div class="form-group">
+          <label class="input-label">Notes</label>
+          <textarea class="notes-input" placeholder="Add a note..." rows="3"></textarea>
+        </div>
+
+        <!-- TRANSFER BUTTON -->
+        <button class="transfer-btn">Transfer Now</button>
+
+      </div>
+
+      <!-- RIGHT: TRANSFER HISTORY -->
+      <div class="history-container">
+        <h2 class="history-title">Transfer History</h2>
+
+        <div class="history-list">
+          <!-- History items will be populated by JavaScript -->
+          <div class="history-item">
+            <div class="history-icon">
+              <span>⇄</span>
+            </div>
+            <div class="history-details">
+              <div class="history-accounts">Checking → Savings</div>
+              <div class="history-date">Nov 25, 2024</div>
+            </div>
+            <div class="history-amount">$500.00</div>
+          </div>
+
+          <div class="history-item">
+            <div class="history-icon">
+              <span>⇄</span>
+            </div>
+            <div class="history-details">
+              <div class="history-accounts">Savings → Checking</div>
+              <div class="history-date">Nov 20, 2024</div>
+            </div>
+            <div class="history-amount">$1,200.00</div>
+          </div>
+
+          <div class="history-item">
+            <div class="history-icon">
+              <span>⇄</span>
+            </div>
+            <div class="history-details">
+              <div class="history-accounts">Checking → Savings</div>
+              <div class="history-date">Nov 15, 2024</div>
+            </div>
+            <div class="history-amount">$750.00</div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <script src="transfer.js"></script>
+</body>
+
+</html>

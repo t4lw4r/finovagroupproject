@@ -24,23 +24,18 @@ body {
 .logo-section {
   display: flex;
   align-items: center;
-  gap: 10px;
-  padding: 0 20px 30px;
+  justify-content: center;
+  padding: 30px 20px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   margin-bottom: 20px;
+  min-height: 100px;
 }
 
-.logo-icon {
-  width: 35px;
-  height: 35px;
-  background: white;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
-  color: #2b0048;
-  font-size: 20px;
+.logo-img {
+  width: 120px;
+  height: auto;
+  max-height: 80px;
+  object-fit: contain;
 }
 
 .logo-text {
