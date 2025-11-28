@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Finova – Investments</title>
+  <link rel="stylesheet" href="investments.css">
+</head>
+
+<body>
+
+  <!-- SIDEBAR -->
+  <div class="sidebar">
+    <div class="logo-section">
+      <div class="logo-icon">◉</div>
+      <div class="logo-text">Finova</div>
+    </div>
+    <div class="nav-item" onclick="window.location.href='dashboard.html'">Dashboard</div>
+    <div class="nav-item" onclick="window.location.href='transactions.html'">Transactions</div>
+    <div class="nav-item active">Investments</div>
+    <div class="nav-item">Transfer Funds</div>
+    <div class="nav-item">Settings</div>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <div class="main-content">
+
+    <!-- HEADER -->
+    <div class="header">
+      <h1 class="page-title">Investments</h1>
+    </div>
+
+    <!-- SEARCH BAR -->
+    <div class="search-container">
+      <div class="search-box">
+        <span class="search-icon">🔍</span>
+        <input type="text" class="search-input" placeholder="Search...">
+      </div>
+      <button class="filter-btn">
+        <span class="filter-icon">⚙</span>
+      </button>
+    </div>
+
+    <!-- INVESTMENTS CONTAINER -->
+    <div class="investments-container">
+
+      <!-- TOTAL INVESTMENTS HEADER -->
+      <div class="total-header">
+        <div class="total-left">
+          <h2 class="total-title">Total Investments</h2>
+        </div>
+        <div class="total-right">
+          <div class="total-amount">$30,789.41</div>
+          <div class="total-change positive">+13%</div>
+        </div>
+      </div>
+
+      <!-- INVESTMENT ITEMS -->
+
+      <!-- Investment 1 - Crypto Wallet -->
+      <div class="investment-item">
+        <div class="investment-left">
+          <div class="investment-icon crypto">
+            <span>₿</span>
+          </div>
+          <div class="investment-details">
+            <div class="investment-name">Crypto Wallet</div>
+            <div class="investment-type">Cryptocurrency</div>
+          </div>
+        </div>
+        <div class="investment-right">
+          <div class="investment-amount">$2,640.55</div>
+          <div class="investment-change positive">+12.8%</div>
+          <button class="details-btn">Details</button>
+        </div>
+      </div>
+
+      <!-- Investment 2 - TFSA Growth Portfolio -->
+      <div class="investment-item">
+        <div class="investment-left">
+          <div class="investment-icon portfolio">
+            <span>📊</span>
+          </div>
+          <div class="investment-details">
+            <div class="investment-name">TFSA Growth Portfolio</div>
+            <div class="investment-type">Mutual Funds</div>
+          </div>
+        </div>
+        <div class="investment-right">
+          <div class="investment-amount">$12,450.32</div>
+          <div class="investment-change negative">-3.5%</div>
+          <button class="details-btn">Details</button>
+        </div>
+      </div>
+
+      <!-- Investment 3 - Non-Registered Portfolio -->
+      <div class="investment-item">
+        <div class="investment-left">
+          <div class="investment-icon stocks">
+            <span>📈</span>
+          </div>
+          <div class="investment-details">
+            <div class="investment-name">Non-Registered Portfolio</div>
+            <div class="investment-type">Stocks</div>
+          </div>
+        </div>
+        <div class="investment-right">
+          <div class="investment-amount">$5,781.44</div>
+          <div class="investment-change negative">-3.1%</div>
+          <button class="details-btn">Details</button>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- PAGINATION -->
+    <div class="pagination">
+      <button class="page-btn">‹</button>
+      <button class="page-btn active">1</button>
+      <button class="page-btn">›</button>
+    </div>
+
+  </div>
+
+  <script src="investments.js"></script>
+</body>
+
+</html>

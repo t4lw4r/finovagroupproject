@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Finova – Transactions</title>
+  <link rel="stylesheet" href="transactions.css">
+</head>
+
+<body>
+
+  <!-- SIDEBAR -->
+  <div class="sidebar">
+    <div class="logo-section">
+      <div class="logo-icon">◉</div>
+      <div class="logo-text">Finova</div>
+    </div>
+    <div class="nav-item" onclick="window.location.href='dashboard.html'">Dashboard</div>
+    <div class="nav-item active">Transactions</div>
+    <div class="nav-item">Investments</div>
+    <div class="nav-item">Transfer Funds</div>
+    <div class="nav-item">Settings</div>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <div class="main-content">
+
+    <!-- HEADER -->
+    <div class="header">
+      <h1 class="page-title">Transactions</h1>
+      <div class="header-right">
+        <select class="account-dropdown">
+          <option>Choose account</option>
+          <option>Checking Account</option>
+          <option>Savings Account</option>
+          <option>Credit Card</option>
+        </select>
+        <button class="download-btn">⬇ Download</button>
+      </div>
+    </div>
+
+    <!-- SEARCH BAR -->
+    <div class="search-container">
+      <div class="search-box">
+        <span class="search-icon">🔍</span>
+        <input type="text" class="search-input" placeholder="Search...">
+      </div>
+      <button class="filter-btn">
+        <span class="filter-icon">⚙</span>
+      </button>
+    </div>
+
+    <!-- TRANSACTIONS LIST -->
+    <div class="transactions-list">
+
+      <!-- Transaction 1 -->
+      <div class="transaction-item">
+        <div class="transaction-left">
+          <div class="transaction-icon coffee">
+            <span>☕</span>
+          </div>
+          <div class="transaction-details">
+            <div class="transaction-name">Tim Hortons</div>
+            <div class="transaction-category">Coffee</div>
+            <div class="transaction-method">Shortly Credit On (Google Pay)</div>
+          </div>
+        </div>
+        <div class="transaction-right">
+          <div class="transaction-amount negative">-$12.45</div>
+          <div class="transaction-date">Transaction date: Nov 25</div>
+          <div class="transaction-posted">Date posted: Nov 27</div>
+          <span class="transaction-badge credit">Credit</span>
+        </div>
+      </div>
+
+      <!-- Transaction 2 -->
+      <div class="transaction-item">
+        <div class="transaction-left">
+          <div class="transaction-icon apple">
+            <span>🍎</span>
+          </div>
+          <div class="transaction-details">
+            <div class="transaction-name">Apple</div>
+            <div class="transaction-category">iPhone</div>
+            <div class="transaction-method">Withdraw Warrant On (Google Pay)</div>
+          </div>
+        </div>
+        <div class="transaction-right">
+          <div class="transaction-amount negative">-$12.45</div>
+          <div class="transaction-date">Transaction date: Nov 25</div>
+          <div class="transaction-posted">Date posted: Nov 27</div>
+          <span class="transaction-badge debit">Debit</span>
+        </div>
+      </div>
+
+      <!-- Transaction 3 -->
+      <div class="transaction-item">
+        <div class="transaction-left">
+          <div class="transaction-icon grocery">
+            <span>🛒</span>
+          </div>
+          <div class="transaction-details">
+            <div class="transaction-name">Food Basics</div>
+            <div class="transaction-category">Grocery</div>
+            <div class="transaction-method">Syndicate On (Google Pay)</div>
+          </div>
+        </div>
+        <div class="transaction-right">
+          <div class="transaction-amount negative">-$12.45</div>
+          <div class="transaction-date">Transaction date: Nov 25</div>
+          <div class="transaction-posted">Date posted: Nov 27</div>
+          <span class="transaction-badge credit">Credit</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- PAGINATION -->
+    <div class="pagination">
+      <button class="page-btn">‹</button>
+      <button class="page-btn active">1</button>
+      <button class="page-btn">›</button>
+    </div>
+
+  </div>
+
+  <script src="transactions.js"></script>
+</body>
+
+</html>
