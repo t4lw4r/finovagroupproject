@@ -15,7 +15,7 @@ navItems.forEach(item => {
     } else if (text === 'Transfer Funds') {
       window.location.href = 'transfer.html';
     } else if (text === 'Settings') {
-      alert('Settings page - Coming soon!');
+      window.location.href = 'settings.html';
     }
   });
 });

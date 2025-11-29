@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Finova – AI Assistant</title>
+  <link rel="stylesheet" href="chatbot.css">
+</head>
+
+<body>
+
+  <!-- SIDEBAR -->
+  <div class="sidebar">
+    <div class="logo-section">
+      <img src="logo.png" alt="Finova Logo" class="logo-img">
+    </div>
+    <div class="nav-item" onclick="window.location.href='dashboard.html'">Dashboard</div>
+    <div class="nav-item" onclick="window.location.href='transactions.html'">Transactions</div>
+    <div class="nav-item" onclick="window.location.href='investments.html'">Investments</div>
+    <div class="nav-item" onclick="window.location.href='transfer.html'">Transfer Funds</div>
+    <div class="nav-item">Settings</div>
+  </div>
+
+
+  <div class="main-content-wrapper">
+
+    <div class="background-content">
+      <div class="header">
+        <h1 class="page-title">Transfer Funds</h1>
+      </div>
+
+      <div class="search-container">
+        <div class="search-box">
+          <span class="search-icon">🔍</span>
+          <input type="text" class="search-input" placeholder="Search account..." disabled>
+        </div>
+      </div>
+
+      <div class="transfer-form-preview">
+        <div class="account-preview">
+          <label>From Account</label>
+          <div class="account-box">Checking Account</div>
+        </div>
+        <div class="account-preview">
+          <label>To Account</label>
+          <div class="account-box">Savings Account</div>
+        </div>
+      </div>
+
+      <div class="amount-preview">
+        <label>Amount to Transfer</label>
+        <input type="text" placeholder="$ 0.00" disabled>
+      </div>
+
+      <div class="notes-preview">
+        <label>Notes</label>
+        <textarea placeholder="Add a note..." disabled></textarea>
+      </div>
+
+      <button class="transfer-btn-preview" disabled>Transfer Now</button>
+    </div>
+
+
+    <div class="chatbot-modal">
+
+
+      <div class="chatbot-header">
+        <div class="header-left">
+          <div class="info-icon">ⓘ</div>
+          <span class="header-title">Information Agent</span>
+        </div>
+        <button class="close-btn" onclick="window.history.back()">✕</button>
+      </div>
+
+
+      <div class="chat-messages" id="chatMessages">
+
+
+        <div class="message bot-message">
+          <div class="message-avatar bot-avatar">
+            <span>🤖</span>
+          </div>
+          <div class="message-bubble bot-bubble">
+            <p>Hello, I am your AI Assistant.</p>
+            <p>Ask me anything!</p>
+          </div>
+        </div>
+
+        <div class="message user-message">
+          <div class="message-bubble user-bubble">
+            How long does it take for funds to be transferred?
+          </div>
+        </div>
+
+      </div>
+
+      <div class="chat-input-container">
+        <input type="text" class="chat-input" placeholder="Type a message" id="chatInput"
+          onkeypress="handleKeyPress(event)">
+        <button class="send-btn" onclick="sendMessage()">▶</button>
+      </div>
+
+    </div>
+
+  </div>
+
+  <script src="chatbot.js"></script>
+</body>
+
+</html>

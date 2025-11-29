@@ -13,7 +13,7 @@
   <!-- SIDEBAR -->
   <div class="sidebar">
     <div class="logo-section">
-      <img src="logo.png" alt="Finova Logo" class="logo-img">
+      <img src="LogoVariant1.png" alt="Finova Logo" class="logo-img">
     </div>
     <div class="nav-item" onclick="window.location.href='dashboard.html'">Dashboard</div>
     <div class="nav-item" onclick="window.location.href='transactions.html'">Transactions</div>
@@ -30,7 +30,7 @@
       <h1 class="page-title">Transfer Funds</h1>
     </div>
 
-    <!-- SEARCH BAR -->
+    <!-- SEARCH AND FILTER BAR -->
     <div class="search-container">
       <div class="search-box">
         <span class="search-icon">🔍</span>
@@ -39,6 +39,21 @@
       <button class="filter-btn">
         <span class="filter-icon">⚙</span>
       </button>
+      <select class="month-dropdown">
+        <option>Choose month...</option>
+        <option>January</option>
+        <option>February</option>
+        <option>March</option>
+        <option>April</option>
+        <option>May</option>
+        <option>June</option>
+        <option>July</option>
+        <option>August</option>
+        <option>September</option>
+        <option>October</option>
+        <option>November</option>
+        <option>December</option>
+      </select>
     </div>
 
     <!-- TRANSFER SECTION -->
@@ -51,13 +66,12 @@
         <div class="accounts-section">
           <div class="account-column">
             <label class="account-label">From Account</label>
-            <div class="account-card selected">
+            <div class="account-card selected" data-account="checking">
               <div class="account-icon checking">
                 <span>💳</span>
               </div>
               <div class="account-info">
                 <div class="account-name">Checking Account</div>
-                <div class="account-balance">$12,450</div>
               </div>
             </div>
           </div>
@@ -66,13 +80,12 @@
 
           <div class="account-column">
             <label class="account-label">To Account</label>
-            <div class="account-card">
+            <div class="account-card" data-account="savings">
               <div class="account-icon savings">
                 <span>💰</span>
               </div>
               <div class="account-info">
                 <div class="account-name">Savings Account</div>
-                <div class="account-balance">$8,340</div>
               </div>
             </div>
           </div>
@@ -83,7 +96,7 @@
           <label class="input-label">Amount to Transfer</label>
           <div class="amount-input-wrapper">
             <span class="currency-symbol">$</span>
-            <input type="number" class="amount-input" placeholder="0.00" id="transferAmount">
+            <input type="text" class="amount-input" placeholder="0.00" id="transferAmount">
           </div>
           <div class="input-hint">Minimum $1 — No fee for interaccount transfers</div>
         </div>
@@ -104,39 +117,124 @@
         <h2 class="history-title">Transfer History</h2>
 
         <div class="history-list">
-          <!-- History items will be populated by JavaScript -->
+
           <div class="history-item">
-            <div class="history-icon">
-              <span>⇄</span>
+            <div class="history-from-to">
+              <span class="from-account">Checking</span>
+              <span class="arrow-icon">→</span>
+              <span class="to-account">Savings</span>
             </div>
-            <div class="history-details">
-              <div class="history-accounts">Checking → Savings</div>
-              <div class="history-date">Nov 25, 2024</div>
-            </div>
-            <div class="history-amount">$500.00</div>
+            <div class="history-amount">$10.00</div>
+            <div class="history-id">TF-281</div>
           </div>
 
           <div class="history-item">
-            <div class="history-icon">
-              <span>⇄</span>
+            <div class="history-from-to">
+              <span class="from-account">Savings</span>
+              <span class="arrow-icon">→</span>
+              <span class="to-account">Crypto Wallet</span>
             </div>
-            <div class="history-details">
-              <div class="history-accounts">Savings → Checking</div>
-              <div class="history-date">Nov 20, 2024</div>
-            </div>
-            <div class="history-amount">$1,200.00</div>
+            <div class="history-amount">$10.00</div>
+            <div class="history-id">TF-282</div>
           </div>
 
           <div class="history-item">
-            <div class="history-icon">
-              <span>⇄</span>
+            <div class="history-from-to">
+              <span class="from-account">Checking</span>
+              <span class="arrow-icon">→</span>
+              <span class="to-account">TFSA</span>
             </div>
-            <div class="history-details">
-              <div class="history-accounts">Checking → Savings</div>
-              <div class="history-date">Nov 15, 2024</div>
-            </div>
-            <div class="history-amount">$750.00</div>
+            <div class="history-amount">$10.00</div>
+            <div class="history-id">TF-004</div>
           </div>
+
+          <div class="history-item">
+            <div class="history-from-to">
+              <span class="from-account">Savings</span>
+              <span class="arrow-icon">→</span>
+              <span class="to-account">Checking</span>
+            </div>
+            <div class="history-amount">$10.00</div>
+            <div class="history-id">TF-010</div>
+          </div>
+
+          <div class="history-item">
+            <div class="history-from-to">
+              <span class="from-account">Checking</span>
+              <span class="arrow-icon">→</span>
+              <span class="to-account">Savings</span>
+            </div>
+            <div class="history-amount">$70.00</div>
+            <div class="history-id">TF-001</div>
+          </div>
+
+          <div class="history-item">
+            <div class="history-from-to">
+              <span class="from-account">Checking</span>
+              <span class="arrow-icon">→</span>
+              <span class="to-account">Crypto Wallet</span>
+            </div>
+            <div class="history-amount">$80.00</div>
+            <div class="history-id">TF-048</div>
+          </div>
+
+          <div class="history-item">
+            <div class="history-from-to">
+              <span class="from-account">Checking</span>
+              <span class="arrow-icon">→</span>
+              <span class="to-account">Savings</span>
+            </div>
+            <div class="history-amount">$80.00</div>
+            <div class="history-id">TF-070</div>
+          </div>
+
+          <div class="history-item">
+            <div class="history-from-to">
+              <span class="from-account">Savings</span>
+              <span class="arrow-icon">→</span>
+              <span class="to-account">Checking</span>
+            </div>
+            <div class="history-amount">$70.00</div>
+            <div class="history-id">TF-235</div>
+          </div>
+
+          <div class="history-item">
+            <div class="history-from-to">
+              <span class="from-account">Checking</span>
+              <span class="arrow-icon">→</span>
+              <span class="to-account">Savings</span>
+            </div>
+            <div class="history-amount">$50.00</div>
+            <div class="history-id">TF-064</div>
+          </div>
+
+          <div class="history-item">
+            <div class="history-from-to">
+              <span class="from-account">Savings</span>
+              <span class="arrow-icon">→</span>
+              <span class="to-account">Checking</span>
+            </div>
+            <div class="history-amount">$90.00</div>
+            <div class="history-id">TF-200</div>
+          </div>
+
+          <div class="history-item">
+            <div class="history-from-to">
+              <span class="from-account">Checking</span>
+              <span class="arrow-icon">→</span>
+              <span class="to-account">Savings</span>
+            </div>
+            <div class="history-amount">$50.00</div>
+            <div class="history-id">TF-002</div>
+          </div>
+
+        </div>
+
+        <!-- PAGINATION -->
+        <div class="pagination">
+          <button class="page-btn">‹</button>
+          <button class="page-btn active">1</button>
+          <button class="page-btn">›</button>
         </div>
 
       </div>
@@ -144,6 +242,11 @@
     </div>
 
   </div>
+
+  <!-- AI CHATBOT BUTTON -->
+  <button class="chatbot-btn" onclick="window.location.href='chatbot.html'">
+    <span class="chatbot-icon">?</span>
+  </button>
 
   <script src="transfer.js"></script>
 </body>

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Finova – Settings</title>
+  <link rel="stylesheet" href="settings.css">
+</head>
+
+<body>
+
+  <!-- SIDEBAR -->
+  <div class="sidebar">
+    <div class="logo-section">
+      <img src="LogoVariant1.png" alt="Finova Logo" class="logo-img">
+    </div>
+    <div class="nav-item" onclick="window.location.href='dashboard.html'">Dashboard</div>
+    <div class="nav-item" onclick="window.location.href='transactions.html'">Transactions</div>
+    <div class="nav-item" onclick="window.location.href='investments.html'">Investments</div>
+    <div class="nav-item" onclick="window.location.href='transfer.html'">Transfer Funds</div>
+    <div class="nav-item active">Settings</div>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <div class="main-content">
+
+    <!-- HEADER -->
+    <div class="header">
+      <h1 class="page-title">Settings</h1>
+    </div>
+
+    <!-- SETTINGS CONTAINER -->
+    <div class="settings-container">
+
+      <!-- PROFILE SECTION -->
+      <div class="settings-section">
+        <h2 class="section-title">Profile Settings</h2>
+
+        <div class="profile-avatar-section">
+          <div class="avatar-container">
+            <div class="avatar-circle">
+              <span>RT</span>
+            </div>
+            <button class="change-photo-btn">Change Photo</button>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">First Name</label>
+            <input type="text" class="form-input" value="Rohit" placeholder="First Name">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Last Name</label>
+            <input type="text" class="form-input" value="Talwar" placeholder="Last Name">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Email Address</label>
+          <input type="email" class="form-input" value="talwar@finova.com" placeholder="Email">
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Phone Number</label>
+          <input type="tel" class="form-input" value="+1 (555) 123-4567" placeholder="Phone">
+        </div>
+
+        <button class="save-btn">Save Changes</button>
+      </div>
+
+      <!-- SECURITY SECTION -->
+      <div class="settings-section">
+        <h2 class="section-title">Security</h2>
+
+        <div class="form-group">
+          <label class="form-label">Current Password</label>
+          <input type="password" class="form-input" placeholder="Enter current password">
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">New Password</label>
+          <input type="password" class="form-input" placeholder="Enter new password">
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Confirm New Password</label>
+          <input type="password" class="form-input" placeholder="Confirm new password">
+        </div>
+
+        <button class="save-btn">Update Password</button>
+
+        <div class="security-option">
+          <div class="option-info">
+            <div class="option-title">Two-Factor Authentication</div>
+            <div class="option-description">Add an extra layer of security to your account</div>
+          </div>
+          <label class="toggle-switch">
+            <input type="checkbox" checked>
+            <span class="toggle-slider"></span>
+          </label>
+        </div>
+
+        <div class="security-option">
+          <div class="option-info">
+            <div class="option-title">Login Alerts</div>
+            <div class="option-description">Get notified when someone logs into your account</div>
+          </div>
+          <label class="toggle-switch">
+            <input type="checkbox" checked>
+            <span class="toggle-slider"></span>
+          </label>
+        </div>
+      </div>
+
+      <!-- NOTIFICATIONS SECTION -->
+      <div class="settings-section">
+        <h2 class="section-title">Notifications</h2>
+
+        <div class="notification-option">
+          <div class="option-info">
+            <div class="option-title">Email Notifications</div>
+            <div class="option-description">Receive transaction alerts via email</div>
+          </div>
+          <label class="toggle-switch">
+            <input type="checkbox" checked>
+            <span class="toggle-slider"></span>
+          </label>
+        </div>
+
+        <div class="notification-option">
+          <div class="option-info">
+            <div class="option-title">SMS Notifications</div>
+            <div class="option-description">Receive transaction alerts via SMS</div>
+          </div>
+          <label class="toggle-switch">
+            <input type="checkbox">
+            <span class="toggle-slider"></span>
+          </label>
+        </div>
+
+        <div class="notification-option">
+          <div class="option-info">
+            <div class="option-title">Push Notifications</div>
+            <div class="option-description">Receive push notifications on your device</div>
+          </div>
+          <label class="toggle-switch">
+            <input type="checkbox" checked>
+            <span class="toggle-slider"></span>
+          </label>
+        </div>
+
+        <div class="notification-option">
+          <div class="option-info">
+            <div class="option-title">Marketing Emails</div>
+            <div class="option-description">Receive promotional offers and updates</div>
+          </div>
+          <label class="toggle-switch">
+            <input type="checkbox">
+            <span class="toggle-slider"></span>
+          </label>
+        </div>
+      </div>
+
+      <!-- PREFERENCES SECTION -->
+      <div class="settings-section">
+        <h2 class="section-title">Preferences</h2>
+
+        <div class="form-group">
+          <label class="form-label">Language</label>
+          <select class="form-select">
+            <option>English</option>
+            <option>Spanish</option>
+            <option>French</option>
+            <option>German</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Currency</label>
+          <select class="form-select">
+            <option>USD ($)</option>
+            <option>EUR (€)</option>
+            <option>GBP (£)</option>
+            <option>CAD ($)</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Time Zone</label>
+          <select class="form-select">
+            <option>Eastern Time (ET)</option>
+            <option>Central Time (CT)</option>
+            <option>Mountain Time (MT)</option>
+            <option>Pacific Time (PT)</option>
+          </select>
+        </div>
+
+        <button class="save-btn">Save Preferences</button>
+      </div>
+
+      <!-- DANGER ZONE -->
+      <div class="settings-section danger-section">
+        <h2 class="section-title">Danger Zone</h2>
+
+        <div class="danger-option">
+          <div class="option-info">
+            <div class="option-title">Delete Account</div>
+            <div class="option-description">Permanently delete your account and all data</div>
+          </div>
+          <button class="danger-btn">Delete Account</button>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- AI CHATBOT BUTTON -->
+  <button class="chatbot-btn" onclick="window.location.href='chatbot.html'">
+    <span class="chatbot-icon">?</span>
+  </button>
+
+  <script src="settings.js"></script>
+</body>
+
+</html>

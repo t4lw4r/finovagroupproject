@@ -1,0 +1,387 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  display: flex;
+  height: 100vh;
+  background: #f4e8ff;
+}
+
+/* SIDEBAR */
+.sidebar {
+  width: 250px;
+  background: #2b0048;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0;
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: 20px;
+  min-height: 100px;
+}
+
+.logo-img {
+  width: 120px;
+  height: auto;
+  max-height: 80px;
+  object-fit: contain;
+}
+
+.nav-item {
+  padding: 15px 20px;
+  cursor: pointer;
+  transition: background 0.3s;
+  font-size: 15px;
+}
+
+.nav-item:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.nav-item.active {
+  background: rgba(255, 255, 255, 0.15);
+  border-left: 4px solid white;
+}
+
+/* MAIN CONTENT */
+.main-content {
+  flex: 1;
+  padding: 30px;
+  overflow-y: auto;
+}
+
+.header {
+  margin-bottom: 30px;
+}
+
+.page-title {
+  font-size: 32px;
+  font-weight: normal;
+  color: #333;
+}
+
+/* SETTINGS CONTAINER */
+.settings-container {
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.settings-section {
+  background: white;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.section-title {
+  font-size: 22px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+/* PROFILE AVATAR */
+.profile-avatar-section {
+  margin-bottom: 25px;
+}
+
+.avatar-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.avatar-circle {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #8b72b8 0%, #5c1a8d 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.change-photo-btn {
+  padding: 10px 20px;
+  background: #f0f0f0;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  transition: background 0.3s;
+}
+
+.change-photo-btn:hover {
+  background: #e0e0e0;
+}
+
+/* FORM ELEMENTS */
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.form-input,
+.form-select {
+  width: 100%;
+  padding: 12px 15px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.form-input:focus,
+.form-select:focus {
+  border-color: #5c1a8d;
+}
+
+.form-select {
+  cursor: pointer;
+  background: white;
+}
+
+.save-btn {
+  padding: 12px 30px;
+  background: #5c1a8d;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+  margin-top: 10px;
+}
+
+.save-btn:hover {
+  background: #7a2ab8;
+}
+
+/* SECURITY & NOTIFICATION OPTIONS */
+.security-option,
+.notification-option {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.security-option:last-child,
+.notification-option:last-child {
+  border-bottom: none;
+}
+
+.option-info {
+  flex: 1;
+}
+
+.option-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.option-description {
+  font-size: 13px;
+  color: #888;
+}
+
+/* TOGGLE SWITCH */
+.toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 52px;
+  height: 28px;
+}
+
+.toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.toggle-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 28px;
+}
+
+.toggle-slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+.toggle-switch input:checked+.toggle-slider {
+  background-color: #5c1a8d;
+}
+
+.toggle-switch input:checked+.toggle-slider:before {
+  transform: translateX(24px);
+}
+
+/* DANGER ZONE */
+.danger-section {
+  border: 2px solid #ffebee;
+  background: #fff5f5;
+}
+
+.danger-section .section-title {
+  color: #e74c3c;
+}
+
+.danger-option {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+}
+
+.danger-btn {
+  padding: 10px 25px;
+  background: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.danger-btn:hover {
+  background: #c0392b;
+}
+
+/* AI CHATBOT BUTTON */
+.chatbot-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 60px;
+  height: 60px;
+  background: #5c1a8d;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(92, 26, 141, 0.3);
+  transition: all 0.3s;
+  z-index: 1000;
+}
+
+.chatbot-btn:hover {
+  background: #7a2ab8;
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(92, 26, 141, 0.4);
+}
+
+.chatbot-icon {
+  color: white;
+  font-size: 32px;
+  font-weight: bold;
+  line-height: 1;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .sidebar {
+    display: none;
+  }
+
+  .main-content {
+    padding: 20px;
+  }
+
+  .page-title {
+    font-size: 24px;
+  }
+
+  .settings-container {
+    max-width: 100%;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .settings-section {
+    padding: 20px;
+  }
+
+  .avatar-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .chatbot-btn {
+    width: 50px;
+    height: 50px;
+    bottom: 20px;
+    right: 20px;
+  }
+
+  .chatbot-icon {
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 480px) {
+  .danger-option {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .danger-btn {
+    width: 100%;
+  }
+}

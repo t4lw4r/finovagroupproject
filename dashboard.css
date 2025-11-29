@@ -59,7 +59,7 @@ body {
   border-left: 4px solid white;
 }
 
-/* MAIN CONTENT */
+/* MAIN  */
 .main-content {
   flex: 1;
   padding: 30px;
@@ -105,14 +105,14 @@ body {
   cursor: pointer;
 }
 
-/* GRID LAYOUT */
+/* GRID  */
 .dashboard-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
 }
 
-/* ACCOUNT OVERVIEW */
+/* ACCOUNT */
 .account-overview {
   background: white;
   border-radius: 12px;
@@ -213,7 +213,7 @@ body {
   color: white;
 }
 
-/* QUICK ACTIONS */
+/* QUICK action */
 .quick-actions {
   background: white;
   border-radius: 12px;
@@ -236,6 +236,13 @@ body {
   cursor: pointer;
   font-size: 14px;
   transition: transform 0.2s, background 0.3s;
+  width: 100%;
+  height: 100%;
+  min-height: 210px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .action-btn:hover {
@@ -243,7 +250,7 @@ body {
   background: #8b62a8;
 }
 
-/* STATS CARDS */
+/* STAT card holders */
 .stats-row {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -305,7 +312,7 @@ body {
   color: #e74c3c;
 }
 
-/* RESPONSIVE */
+/* responsiveness */
 @media (max-width: 1200px) {
   .dashboard-grid {
     grid-template-columns: 1fr;
